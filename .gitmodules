@@ -1,3 +1,7 @@
 [submodule "littlefs"]
 	path = littlefs
 	url = https://github.com/littlefs-project/littlefs
+
+[submodule "littlefs-creator"]
+	path = littlefs-creator
+	url = "https://github.com/hurzhurz/littlefs-image-creator"
