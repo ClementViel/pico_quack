@@ -1,5 +1,5 @@
+#include "lfs_hal.h"
 #include "littlefs/lfs.h"
-#include "littlefs/lfs_hal.h"
 #include "pico/stdlib.h"
 #include <stdio.h>
 

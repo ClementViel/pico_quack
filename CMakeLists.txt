@@ -12,8 +12,8 @@ pico_sdk_init()
 # rest of your project
 add_executable(coincoin
     coincoin.c
+    lfs_hal.c
     littlefs/lfs.c
-    littlefs/lfs_hal.c
     littlefs/lfs_util.c
 )
 
