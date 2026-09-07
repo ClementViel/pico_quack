@@ -12,11 +12,14 @@ pico_sdk_init()
 # rest of your project
 add_executable(coincoin
     coincoin.c
+    littlefs/lfs.c
+    littlefs/lfs_hal.c
+    littlefs/lfs_util.c
 )
 
 
 # Add pico_stdlib library which aggregates commonly used features
-target_link_libraries(coincoin pico_stdlib)
+target_link_libraries(coincoin pico_stdlib hardware_flash)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(coincoin)
