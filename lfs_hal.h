@@ -11,6 +11,10 @@ int pico_prog_flash_block(const struct lfs_config *c, lfs_block_t block,
 int pico_erase_flash_block(const struct lfs_config *c, lfs_block_t block);
 int pico_sync_flash_block(const struct lfs_config *c);
 
+uint32_t get_flash_offset(void);
+uint32_t get_flash_base(void);
+uint32_t get_flash_size(void);
+
 // Pico's flash can be programed in 256byte pages, and must be erased in 4K
 // pages.
 #define PICO_ERASE_PAGE_SIZE 4096

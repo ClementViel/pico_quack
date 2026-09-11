@@ -35,6 +35,11 @@ uint32_t flash_device_offset(uint32_t block, uint32_t offset) {
   return FLASHFS_FLASH_OFFSET + block * PICO_ERASE_PAGE_SIZE + offset;
 }
 
+uint32_t get_flash_offset(void) { return FLASHFS_FLASH_OFFSET; }
+
+uint32_t get_flash_base(void) { return FLASHFS_BASE_ADDR; }
+uint32_t get_flash_size(void) { return FLASHFS_SIZE_BYTES; }
+
 /*
  * Read from the flash device. Pico's flash is memory mapped, so memcpy will
  * work well.
