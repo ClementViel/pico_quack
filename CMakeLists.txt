@@ -20,6 +20,7 @@ add_executable(coincoin
 
 # Add pico_stdlib library which aggregates commonly used features
 target_link_libraries(coincoin pico_stdlib hardware_flash)
+pico_enable_stdio_usb(coincoin 1)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(coincoin)
