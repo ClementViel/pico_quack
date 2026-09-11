@@ -4,3 +4,6 @@
 [submodule "littlefs-image-creator"]
 	path = littlefs-image-creator
 	url = https://github.com/hurzhurz/littlefs-image-creator
+[submodule "mklittlefs"]
+	path = mklittlefs
+	url = https://github.com/earlephilhower/mklittlefs.git
