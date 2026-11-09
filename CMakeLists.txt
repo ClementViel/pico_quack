@@ -22,10 +22,10 @@ add_executable(coincoin
     littlefs/lfs_util.c
 )
 
-
+add_subdirectory(hid-passthrough)
 target_compile_definitions(coincoin PRIVATE PICO_AUDIO_I2S_MONO_INPUT)
 # Add pico_stdlib library which aggregates commonly used features
-target_link_libraries(coincoin pico_stdlib hardware_flash pico_audio_i2s)
+target_link_libraries(coincoin pico_stdlib hardware_flash pico_audio_i2s hid_pass)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(coincoin)

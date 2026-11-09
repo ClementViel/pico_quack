@@ -1,3 +1,4 @@
+#include "hid-passthrough/hid_passthrough.h"
 #include "lfs_hal.h"
 #include "littlefs/lfs.h"
 #include "pico/audio_i2s.h"
@@ -117,7 +118,7 @@ int main() {
     lfs_format(&lfs, &cfg);
     lfs_mount(&lfs, &cfg);
   }
-
+  // init_hid_passthrough_and_task();
   lfs_stat(&lfs, "/test_quack.wav", &infos);
   printf("FS infos: \n");
   printf("type %d\n", infos.type);
@@ -155,7 +156,7 @@ int main() {
   printf("audio inited\n");
   sleep_ms(1000);
   while (true) {
-    play_file();
+    // play_file();
   }
   return 0;
 }
