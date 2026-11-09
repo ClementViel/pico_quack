@@ -20,6 +20,7 @@ add_executable(coincoin
     wave.c
     littlefs/lfs.c
     littlefs/lfs_util.c
+    audio_hal.c
 )
 
 add_subdirectory(hid-passthrough)

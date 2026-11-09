@@ -19,6 +19,8 @@
 #ifndef __WAVE_H
 #define __WAVE_H
 
+#include "lfs_hal.h"
+#include "pico/audio_i2s.h"
 #include <stdint.h>
 #include <stdio.h>
 
@@ -85,5 +87,8 @@ void wave_write_header(FILE *fp, int bitdepth, int samplesize, int samplerate,
  */
 void wave_write_pcm(FILE *fp, int samplesize, const void *pcm, int nch, int off,
                     int count);
+
+void play_wave_file(lfs_t *fs, lfs_file_t *file,
+                    struct audio_buffer_pool *buffer_pool, wav_header_t header);
 
 #endif /* __WAVE_H */
